@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Две колонки</title>
+  <style>
+    /* Стили для всей страницы */
+    body {
+      background-color: #f4f4f4; /* Серый фон */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center; /* Центрирование по горизонтали */
+      align-items: flex-start; /* Выравнивание по верхнему краю */
+      min-height: 100vh;
+    }
+
+    /* Контейнер для колонок */
+    .container {
+      display: flex;
+      gap: 20px; /* Расстояние между колонками */
+      max-width: 1200px; /* Максимальная ширина контейнера */
+      width: 100%;
+    }
+
+    /* Стили для каждой колонки */
+    .column {
+      flex: 1; /* Равное распределение пространства */
+      background-color: white; /* Белый фон для колонок */
+      padding: 20px;
+      border-radius: 8px; /* Закругленные углы */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    }
+
+    /* Заголовки внутри колонок */
+    h2 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    /* Параграфы внутри колонок */
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Левая колонка -->
+    <div class="column">
+      <h2>Первая колонка</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod 
+        nisi vel tincidunt lacinia. Sed do eiusmod tempor incididunt ut labore 
+        et dolore magna aliqua.
+      </p>
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+        ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="column">
+      <h2>Вторая колонка</h2>
+      <p>
+        Aliquam erat volutpat. Nunc sed risus euismod, vehicula nisi vel, 
+        tincidunt augue. Donec sed nisi vel nisi tincidunt lacinia.
+      </p>
+      <p>
+        Nullam euismod nisi vel tincidunt lacinia. Sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
