@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя страница на GitHub</title>
+  <style>
+    /* Общий стиль страницы */
+    body {
+      background-color: #f4f4f9; /* Светло-серый фон */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Заголовок страницы */
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    /* Контейнер для колонок */
+    .container {
+      display: flex;
+      gap: 20px; /* Расстояние между колонками */
+      max-width: 1200px; /* Максимальная ширина контейнера */
+      margin: 0 auto; /* Центрирование контейнера */
+    }
+
+    /* Стиль для каждой колонки */
+    .column {
+      flex: 1; /* Равное распределение пространства */
+      background-color: white; /* Белый фон */
+      padding: 20px;
+      border-radius: 8px; /* Закругленные углы */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    }
+
+    /* Дополнительные стили для текста */
+    p {
+      color: #555;
+    }
+
+    a {
+      color: #007bff; /* Синие ссылки */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline; /* Подчеркивание при наведении */
+    }
+  </style>
+</head>
+<body>
+  <!-- Заголовок -->
+  <h1>Добро пожаловать на мою страницу GitHub!</h1>
+
+  <!-- Контейнер с колонками -->
+  <div class="container">
+    <!-- Левая колонка -->
+    <div class="column">
+      <h2>О проекте</h2>
+      <p>
+        Этот проект создан для демонстрации возможностей GitHub Pages. 
+        Здесь вы можете разместить информацию о своем проекте, документацию или полезные ссылки.
+      </p>
+      <p>
+        Если у вас есть вопросы, свяжитесь со мной через 
+        <a href="https://github.com/username" target="_blank">GitHub</a>.
+      </p>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="column">
+      <h2>Полезные ссылки</h2>
+      <ul>
+        <li><a href="https://docs.github.com" target="_blank">GitHub Docs</a></li>
+        <li><a href="https://pages.github.com" target="_blank">GitHub Pages</a></li>
+        <li><a href="https://guides.github.com/features/pages/" target="_blank">Создание страниц</a></li>
+      </ul>
+      <p>
+        Вы также можете посмотреть исходный код этого проекта на 
+        <a href="https://github.com/username/repository" target="_blank">GitHub</a>.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
