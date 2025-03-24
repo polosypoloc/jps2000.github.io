@@ -3,88 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Моя страница на GitHub</title>
+  <title>Страница с колонками</title>
   <style>
     /* Общий стиль страницы */
     body {
-      background-color: #f4f4f9; /* Светло-серый фон */
-      font-family: Arial, sans-serif;
+      background-color: #121212; /* Темный фон */
+      color: #e0e0e0; /* Светлый текст */
+      font-family: 'Segoe Print', cursive; /* Рукописный шрифт */
       margin: 0;
-      padding: 20px;
-      color: #333;
+      padding: 0;
       line-height: 1.6;
     }
 
-    /* Заголовок страницы */
-    h1 {
+    /* Бегущая строка */
+    .ticker {
+      background-color: #1f1f1f; /* Темно-серый фон */
+      color: #ff6f61; /* Яркий текст */
       text-align: center;
-      color: #2c3e50;
-      margin-bottom: 20px;
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: ticker-scroll 5s linear infinite;
+    }
+
+    @keyframes ticker-scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Заголовок бегущей строки */
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      font-size: 1.2em;
+      font-weight: bold;
     }
 
     /* Контейнер для колонок */
     .container {
       display: flex;
+      flex-wrap: wrap; /* Для адаптивности */
       gap: 20px; /* Расстояние между колонками */
-      max-width: 1200px; /* Максимальная ширина контейнера */
-      margin: 0 auto; /* Центрирование контейнера */
+      max-width: 1200px;
+      margin: 20px auto; /* Центрирование контейнера */
+      padding: 0 10px;
     }
 
     /* Стиль для каждой колонки */
     .column {
       flex: 1; /* Равное распределение пространства */
-      background-color: white; /* Белый фон */
+      background-color: #1f1f1f; /* Темно-серый фон */
       padding: 20px;
       border-radius: 8px; /* Закругленные углы */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Легкая тень */
+      text-align: center;
     }
 
-    /* Дополнительные стили для текста */
-    p {
-      color: #555;
+    /* Разделительная линия между колонками */
+    .column:not(:last-child) {
+      border-right: 2px solid #333; /* Вертикальная линия */
     }
 
-    a {
-      color: #007bff; /* Синие ссылки */
-      text-decoration: none;
+    /* Изображения в колонках */
+    .column img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
-    a:hover {
-      text-decoration: underline; /* Подчеркивание при наведении */
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Колонки становятся вертикальными */
+      }
+      .column:not(:last-child) {
+        border-right: none; /* Убираем разделительную линию */
+        border-bottom: 2px solid #333; /* Добавляем горизонтальную линию */
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Заголовок -->
-  <h1>Добро пожаловать на мою страницу GitHub!</h1>
+  <!-- Бегущая строка -->
+  <div class="ticker">
+    <span>Пук Пук Пук</span>
+  </div>
 
   <!-- Контейнер с колонками -->
   <div class="container">
     <!-- Левая колонка -->
     <div class="column">
-      <h2>О проекте</h2>
-      <p>
-        Этот проект создан для демонстрации возможностей GitHub Pages. 
-        Здесь вы можете разместить информацию о своем проекте, документацию или полезные ссылки.
-      </p>
-      <p>
-        Если у вас есть вопросы, свяжитесь со мной через 
-        <a href="https://github.com/username" target="_blank">GitHub</a>.
-      </p>
+      <img src="https://via.placeholder.com/300x200" alt="Изображение для первой колонки">
+      <h2>Первая</h2>
+      <p>Первая. Первая. Первая.</p>
     </div>
 
     <!-- Правая колонка -->
     <div class="column">
-      <h2>Полезные ссылки</h2>
-      <ul>
-        <li><a href="https://docs.github.com" target="_blank">GitHub Docs</a></li>
-        <li><a href="https://pages.github.com" target="_blank">GitHub Pages</a></li>
-        <li><a href="https://guides.github.com/features/pages/" target="_blank">Создание страниц</a></li>
-      </ul>
-      <p>
-        Вы также можете посмотреть исходный код этого проекта на 
-        <a href="https://github.com/username/repository" target="_blank">GitHub</a>.
-      </p>
+      <img src="https://via.placeholder.com/300x200" alt="Изображение для второй колонки">
+      <h2>Вторая</h2>
+      <p>Вторая. Вторая. Вторая.</p>
     </div>
   </div>
 </body>
